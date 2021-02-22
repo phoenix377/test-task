@@ -1,0 +1,8 @@
+.BathTubeContainer {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.BathTube_Clip {
+    clip-path: ellipse(49% 84% at 50% 16%);
+}
