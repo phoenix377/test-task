@@ -6,6 +6,7 @@ function App() {
   const bathTubeRef = React.useRef<BathTubeRef>()
 
   const [widthValue, setWidthValue] = React.useState<number>(300)
+  const [heightValue, setHeightValue] = React.useState<number>(20)
   const [levelsValue, setLevelsValue] = React.useState<number>(5)
   const [delayValue, setDelayValue] = React.useState<number>(100)
   const [colorsValue, setColorsValue] = React.useState<string>('#78BFEB,#4EBFF2,#51BBDB,#4ED8F2,#61E0EB')
@@ -24,6 +25,7 @@ function App() {
           onStep={(step) => console.log(step)}
           // All options:
           width={widthValue}
+          height={heightValue}
           levels={levelsValue}
           delay={delayValue}
           clip={clippedValue}
@@ -38,6 +40,9 @@ function App() {
           <p>Options</p>
           <label htmlFor="width">Width</label>
           <input type="number" id="width" value={widthValue} onChange={(e) => setWidthValue(parseInt(e.target.value))} />
+          <br />
+          <label htmlFor="height">Height</label>
+          <input type="number" id="height" value={heightValue} onChange={(e) => setHeightValue(parseInt(e.target.value))} />
           <br />
           <label htmlFor="levels">Levels</label>
           <input type="number" id="levels" value={levelsValue} onChange={(e) => setLevelsValue(parseInt(e.target.value))} />
